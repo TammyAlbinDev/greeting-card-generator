@@ -28,5 +28,25 @@ function makeCard() {
   let closing = closings[randomNumber(0, closings.length - 1)];
   closingText.textContent = closing;
 }
+function makeCard() {
+  let friendName = nameInput.value;
+  let adjective = adjectiveInput.value;
+  let noun = nounInput.value;
+
+  cardText.textContent = `Dear ${friendName}, you are a ${adjective} ${noun}!`;
+
+  let closing = closings[randomNumber(0, closings.length - 1)];
+  closingText.textContent = closing;
+}
+
+let surpriseButton = document.getElementById("surprise-button");
+
+function surpriseMe() {
+  let randomIndex = randomNumber(0, closings.length - 1);
+  closingText.textContent = closings[randomIndex];
+}
+
+surpriseButton.addEventListener("click", surpriseMe);
 
 makeButton.addEventListener("click", makeCard);
+
