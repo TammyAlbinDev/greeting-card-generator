@@ -10,6 +10,8 @@ let bonusLine = document.getElementById("bonus-line");
 
 let cardsMade = 0;
 
+let resetButton = document.getElementById("reset-button");
+
 let closings = [
   "Warmly,",
   "With love,",
@@ -46,7 +48,19 @@ function surpriseMe() {
   closingText.textContent = closings[randomIndex];
 }
 
+function resetCard() {
+  nameInput.value = "";
+  adjectiveInput.value = "";
+  nounInput.value = "";
+
+  cardText.textContent = "Your card will appear here.";
+  closingText.textContent = "";
+  cardSection.hidden = true;
+}
+
 surpriseButton.addEventListener("click", surpriseMe);
 
 makeButton.addEventListener("click", makeCard);
+
+resetButton.addEventListener("click", resetCard);
 
