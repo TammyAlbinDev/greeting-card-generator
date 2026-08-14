@@ -9,4 +9,4 @@ Enter a few words and the generator turns them into a greeting card, with a secr
 
 ## Live
 
-- Paste your GitHub Pages URL here
+- https://tammyalbindev.github.io/greeting-card-generator/
