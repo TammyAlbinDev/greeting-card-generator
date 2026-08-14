@@ -5,6 +5,10 @@ let adjectiveInput = document.getElementById("adjective-input");
 let nounInput = document.getElementById("noun-input");
 let cardText = document.getElementById("card-text");
 let closingText = document.getElementById("closing-text");
+let cardSection = document.getElementById("card-section");
+let bonusLine = document.getElementById("bonus-line");
+
+let cardsMade = 0;
 
 let closings = [
   "Warmly,",
@@ -19,16 +23,12 @@ function randomNumber(a, b) {
 }
 
 function makeCard() {
-  let friendName = nameInput.value;
-  let adjective = adjectiveInput.value;
-  let noun = nounInput.value;
-
-  cardText.textContent = `Dear ${friendName}, you are a ${adjective} ${noun}!`;
-
-  let closing = closings[randomNumber(0, closings.length - 1)];
-  closingText.textContent = closing;
+    cardsMade = cardsMade + 1;
+    if (cardsMade >= 5){
+        bonusLine.hidden = false;
 }
-function makeCard() {
+    
+  cardSection.hidden = false;
   let friendName = nameInput.value;
   let adjective = adjectiveInput.value;
   let noun = nounInput.value;
